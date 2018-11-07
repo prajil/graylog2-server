@@ -123,6 +123,7 @@ if (TARGET === 'start') {
     plugins: [
       new webpack.DefinePlugin({
         DEVELOPMENT: true,
+        GL2_SERVER_URL: JSON.stringify(process.env.GL2_SERVER_URL),
       }),
       new CopyWebpackPlugin([{ from: 'config.js' }]),
       new webpack.HotModuleReplacementPlugin(),
